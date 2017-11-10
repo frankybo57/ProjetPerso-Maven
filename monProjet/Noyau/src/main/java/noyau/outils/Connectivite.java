@@ -9,6 +9,11 @@ import noyau.repository.ModuleRepositoryJpa;
 import noyau.repository.UtilisateurRepository;
 import noyau.repository.UtilisateurRepositoryJpa;
 
+/**
+ * 
+ * @author Francois 2
+ * @version 1.0
+ */
 public class Connectivite {
 	private Connectivite connectivite = null;
 	
@@ -20,15 +25,27 @@ public class Connectivite {
 	private Connectivite(){
 	}
 	
+	/**
+	 * 
+	 * @return Singleton connectivite
+	 */
 	public Connectivite getInstance(){
 		if(this.connectivite == null) this.connectivite = new Connectivite();
 		return connectivite;
 	}
 	
+	/**
+	 * 
+	 * @return EntityManagerFactory
+	 */
 	public EntityManagerFactory getEntityManagerFactory(){
 		return this.entityManagerFactory;
 	}
 	
+	/**
+	 * 
+	 * @return EntityManager
+	 */
 	public EntityManager createEntityManager(){
 		return this.entityManagerFactory.createEntityManager();
 	}
