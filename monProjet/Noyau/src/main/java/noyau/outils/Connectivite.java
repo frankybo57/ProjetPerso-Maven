@@ -4,16 +4,20 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import noyau.repository.ModuleRepository;
+import noyau.repository.ModuleRepositoryJpa;
+import noyau.repository.UtilisateurRepository;
+import noyau.repository.UtilisateurRepositoryJpa;
+
 public class Connectivite {
 	private Connectivite connectivite = null;
 	
-	private final EntityManagerFactory entityManagerFactory;
+	private final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("module");
 	
-	private final ModuleRepository = new ModuleRepositoryJpa();
-	private final UtilisateurRepository = new UtilisateurRepositoryJpa();
+	private final ModuleRepository modRepo = new ModuleRepositoryJpa();
+	private final UtilisateurRepository utiRepo = new UtilisateurRepositoryJpa();
 	
 	private Connectivite(){
-		this.entityManagerFactory = Persistence.createEntityManagerFactory("module");
 	}
 	
 	public Connectivite getInstance(){
