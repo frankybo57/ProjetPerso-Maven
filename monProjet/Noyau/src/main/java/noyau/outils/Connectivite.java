@@ -32,4 +32,18 @@ public class Connectivite {
 	public EntityManager createEntityManager(){
 		return this.entityManagerFactory.createEntityManager();
 	}
+
+	/**
+	 * @return the modRepo
+	 */
+	public ModuleRepository getModRepo() {
+		return modRepo;
+	}
+
+	/**
+	 * @return the utiRepo
+	 */
+	public UtilisateurRepository getUtiRepo() {
+		return utiRepo;
+	}
 }
