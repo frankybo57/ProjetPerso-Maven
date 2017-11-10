@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="users")
-@SequenceGenerator(name = "sequenceUtilisateur", sequenceName = "SequenceGenerator")
+@SequenceGenerator(name = "sequenceUtilisateur", sequenceName = "SequenceUtilisateur")
 public class Utilisateur {
 	@Id @GeneratedValue(generator = "sequenceUtilisateur")
 	private Integer id;
