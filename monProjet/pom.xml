@@ -35,5 +35,6 @@
     <module>ModuleStock</module>
     <module>ModuleRecette</module>
     <module>ModuleCourses</module>
+    <module>ModuleComptes</module>
   </modules>
 </project>
